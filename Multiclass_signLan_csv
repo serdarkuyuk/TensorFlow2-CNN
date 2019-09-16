@@ -78,13 +78,12 @@ history = model.fit_generator(train_datagen.flow(training_images, training_label
 
 model.evaluate(testing_images, testing_labels)
     
-# Plot the chart for accuracy and loss on both training and validation
 
 import matplotlib.pyplot as plt
-acc = # Your Code Here
-val_acc = # Your Code Here
-loss = # Your Code Here
-val_loss = # Your Code Here
+acc = history.history['acc']
+val_acc = history.history['val_acc']
+loss = history.history['loss']
+val_loss = history.history['val_loss']
 
 epochs = range(len(acc))
 
@@ -100,4 +99,3 @@ plt.title('Training and validation loss')
 plt.legend()
 
 plt.show()
-
